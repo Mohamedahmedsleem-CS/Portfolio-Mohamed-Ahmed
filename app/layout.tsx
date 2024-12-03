@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/ali-modified.png" sizes="any" />
+        <link rel="icon" href="/ali2.png" sizes="any" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
