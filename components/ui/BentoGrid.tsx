@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 
 import { cn } from "@/lib/utils";
-
+import animationData from "@/data/confetti.json";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
+import type { ConfettiLottieProps } from "./ConfettiLottie";
+
+// lottie-web uses the DOM; load only in the browser. Wrapper uses `lottie-react` (React 18–safe).
+const ConfettiLottie = dynamic<ConfettiLottieProps>(
+  () => import("./ConfettiLottie"),
+  { ssr: false }
+);
 
 export const BentoGrid = ({
   className,
@@ -55,15 +59,6 @@ export const BentoGridItem = ({
   const rightLists = ["Redux", "RubyOnRails", "PostgreSQL"];
 
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     const text = "mohamedselim29511@gmail.com";
@@ -181,7 +176,12 @@ export const BentoGridItem = ({
                 }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <ConfettiLottie
+                  animationData={animationData}
+                  loop={copied}
+                  autoplay={copied}
+                  style={{ width: 400, height: 200 }}
+                />
               </div>
 
               <MagicButton
