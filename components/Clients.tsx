@@ -1,23 +1,37 @@
-import React from 'react'
-import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
-import { companies, testimonials } from '@/data'
+"use client";
+
+import React from "react";
+
+import { useLanguage } from "@/context/LanguageContext";
+import { companies, testimonials } from "@/data";
+import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 
 const Clients = () => {
+  const { lang, t, textDir } = useLanguage();
+
+  const localizedTestimonials = testimonials.map((item) => ({
+    quote: item.quote[lang],
+    name: item.name[lang],
+    title: item.title[lang],
+    img: item.img,
+  }));
+
   return (
     <div className="py-20 " id="testimonials">
-      <h1 className="heading">
-        Kind words from <span className="text-purple">satisfied clients</span>
+      <h1 className="heading" dir={textDir}>
+        {t.clients.headingBefore}{" "}
+        <span className="text-purple">{t.clients.headingHighlight}</span>
       </h1>
       <div className="flex flex-col items-center maxx-lg:mt-10 ">
-        {/* <div className='h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden' > */}
         <InfiniteMovingCards
-          items={testimonials}
+          key={lang}
+          items={localizedTestimonials}
           direction="right"
           speed="slow"
+          textDir={textDir}
         />
-        
-        {/* the name of prject you made it  */}
-        <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg: mt-10'>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg: mt-10">
           {companies.map(({ id, img, name, nameImg }) => (
             <div key={id} className="flex md:max-w-60 max-w-32 gap-2">
               <img src={img} alt={name} className="md:w-10 w-5" />
@@ -25,11 +39,9 @@ const Clients = () => {
             </div>
           ))}
         </div>
-
-        {/* </div> */}
       </div>
     </div>
   );
-}
+};
 
-export default Clients
+export default Clients;

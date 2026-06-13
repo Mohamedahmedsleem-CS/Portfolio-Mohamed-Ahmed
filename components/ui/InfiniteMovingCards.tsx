@@ -9,6 +9,7 @@ export const InfiniteMovingCards = ({
   speed = "fast",
   pauseOnHover = true,
   className,
+  textDir,
 }: {
   items: {
     img: string | undefined;
@@ -20,6 +21,7 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  textDir?: "rtl" | "ltr";
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -96,7 +98,7 @@ export const InfiniteMovingCards = ({
             }}
             key={idx}
           >
-            <blockquote>
+            <blockquote dir={textDir}>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"

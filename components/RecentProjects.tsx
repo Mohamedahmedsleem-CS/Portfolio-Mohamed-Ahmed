@@ -2,15 +2,18 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
+import { useLanguage } from "@/context/LanguageContext";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 
-const RecentProjects = () => { 
+const RecentProjects = () => {
+  const { lang, t, textDir } = useLanguage();
+
   return (
     <div className="py-20" id="projects">
-      <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+      <h1 className="heading" dir={textDir}>
+        {t.projects.headingBefore}{" "}
+        <span className="text-purple">{t.projects.headingHighlight}</span>
       </h1>
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
@@ -19,8 +22,8 @@ const RecentProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
-              <PinContainer title={item.link} href={item.link}>
-            <a href={item.link}>
+            <PinContainer title={item.link} href={item.link}>
+              <a href={item.link}>
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -35,18 +38,22 @@ const RecentProjects = () => {
                   />
                 </div>
 
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                  {item.title}
+                <h1
+                  dir={textDir}
+                  className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1"
+                >
+                  {item.title[lang]}
                 </h1>
 
                 <p
+                  dir={textDir}
                   className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
                   style={{
                     color: "#BEC1DD",
                     margin: "1vh 0",
                   }}
                 >
-                  {item.des}
+                  {item.des[lang]}
                 </p>
 
                 <div className="flex items-center justify-between mt-7 mb-3">
@@ -65,14 +72,17 @@ const RecentProjects = () => {
                   </div>
 
                   <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                      Check Live Site
+                    <p
+                      dir={textDir}
+                      className="flex lg:text-xl md:text-xs text-sm text-purple"
+                    >
+                      {t.projects.checkLiveSite}
                     </p>
                     <FaLocationArrow className="ms-3" color="#CBACF9" />
                   </div>
                 </div>
-            </a>
-              </PinContainer>
+              </a>
+            </PinContainer>
           </div>
         ))}
       </div>

@@ -7,6 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 
 export const FloatingNav = ({
@@ -14,18 +15,18 @@ export const FloatingNav = ({
   className,
 }: {
   navItems: {
-    name: string;
+    name: { ar: string; en: string };
     link: string;
     icon?: JSX.Element;
   }[];
   className?: string;
 }) => {
+  const { lang, textDir } = useLanguage();
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
@@ -60,7 +61,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
@@ -69,10 +70,11 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="text-sm !cursor-pointer">{navItem.name}</span>
+            <span className="text-sm !cursor-pointer" dir={textDir}>
+              {navItem.name[lang]}
+            </span>
           </Link>
         ))}
-  
       </motion.div>
     </AnimatePresence>
   );

@@ -73,6 +73,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  html[lang="ar"] body {
+    font-family: var(--font-cairo), ui-sans-serif, sans-serif;
+  }
+  html[lang="en"] body {
+    font-family: var(--font-inter), ui-sans-serif, sans-serif;
+  }
   button {
     @apply active:outline-none;
   }

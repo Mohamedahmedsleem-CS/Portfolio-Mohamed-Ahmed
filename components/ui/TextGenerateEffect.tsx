@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils";
 export const TextGenerateEffect = ({
   words,
   className,
+  dir,
 }: {
   words: string;
   className?: string;
+  dir?: "rtl" | "ltr";
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
@@ -23,7 +25,7 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [words, animate]);
 
   const renderWords = () => {
     return (
@@ -43,7 +45,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("font-bold", className)} dir={dir}>
       <div className="mt-4">
         <div className=" dark:text-white text-black  leading-snug tracking-wide">
           {renderWords()}

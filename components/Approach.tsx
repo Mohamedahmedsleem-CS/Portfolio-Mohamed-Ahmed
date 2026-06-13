@@ -2,22 +2,29 @@
 import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 
 const Approach = () => {
+  const { lang, t, textDir } = useLanguage();
+
   return (
     <section className="w-full py-20">
-      <h1 className="heading">
-        My <span className="text-purple">approach</span>
+      <h1 className="heading" dir={textDir}>
+        {t.approach.headingBefore}{" "}
+        <span className="text-purple">{t.approach.headingHighlight}</span>
       </h1>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
-          title=" Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          description="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
-
+          title={t.approach.phases[0].title}
+          icon={
+            <AceternityIcon
+              order={t.approach.phases[0].order}
+              textDir={textDir}
+            />
+          }
+          description={t.approach.phases[0].description}
+          textDir={textDir}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -26,11 +33,15 @@ const Approach = () => {
         </Card>
 
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          description="Once we agree on the plan, I cue my lofi playlist and dive into
-                coding. From initial sketches to polished code, I keep you updated
-                every step of the way."
+          title={t.approach.phases[1].title}
+          icon={
+            <AceternityIcon
+              order={t.approach.phases[1].order}
+              textDir={textDir}
+            />
+          }
+          description={t.approach.phases[1].description}
+          textDir={textDir}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -41,15 +52,18 @@ const Approach = () => {
             ]}
             dotSize={2}
           />
-
         </Card>
 
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          description="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title={t.approach.phases[2].title}
+          icon={
+            <AceternityIcon
+              order={t.approach.phases[2].order}
+              textDir={textDir}
+            />
+          }
+          description={t.approach.phases[2].description}
+          textDir={textDir}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -67,11 +81,13 @@ const Card = ({
   icon,
   children,
   description,
+  textDir,
 }: {
   title: string;
   icon: React.ReactNode;
   children?: React.ReactNode;
   description: string;
+  textDir?: "rtl" | "ltr";
 }) => {
   const [hovered, setHovered] = React.useState(false);
   return (
@@ -101,10 +117,14 @@ const Card = ({
         <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
           {icon}
         </div>
-        <h2 className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center ">
+        <h2
+          dir={textDir}
+          className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center "
+        >
           {title}
         </h2>
         <h2
+          dir={textDir}
           className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
           style={{ color: "#e4ecff" }}
         >
@@ -115,12 +135,21 @@ const Card = ({
   );
 };
 
-const AceternityIcon = ({ order }: { order: string }) => {
+const AceternityIcon = ({
+  order,
+  textDir,
+}: {
+  order: string;
+  textDir?: "rtl" | "ltr";
+}) => {
   return (
     <div>
       <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-2xl font-bold text-white backdrop-blur-3xl ">
+        <span
+          dir={textDir}
+          className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-2xl font-bold text-white backdrop-blur-3xl "
+        >
           {order}
         </span>
       </button>
