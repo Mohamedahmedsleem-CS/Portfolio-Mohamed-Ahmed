@@ -73,12 +73,6 @@
   body {
     @apply bg-background text-foreground;
   }
-  html[lang="ar"] body {
-    font-family: var(--font-cairo), ui-sans-serif, sans-serif;
-  }
-  html[lang="en"] body {
-    font-family: var(--font-inter), ui-sans-serif, sans-serif;
-  }
   button {
     @apply active:outline-none;
   }
@@ -88,4 +82,16 @@
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
+}
+
+html[lang="ar"],
+html[lang="ar"] body,
+html[lang="ar"] body *:not(svg):not(path) {
+  font-family: var(--font-arabic), Arial, sans-serif !important;
+}
+
+html[lang="en"],
+html[lang="en"] body,
+html[lang="en"] body *:not(svg):not(path) {
+  font-family: var(--font-inter), ui-sans-serif, sans-serif;
 }

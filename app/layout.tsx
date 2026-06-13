@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Cairo, Inter } from "next/font/google";
+import { Inter, Tajawal } from "next/font/google";
 
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "./provider";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo" });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const tajawal = Tajawal({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "700", "800", "900"],
+  variable: "--font-arabic",
+});
 
 export const metadata: Metadata = {
   title: "Mohamed Ahmed ",
@@ -28,7 +36,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${cairo.variable} font-sans`}>
+      <body className={`${inter.variable} ${tajawal.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
