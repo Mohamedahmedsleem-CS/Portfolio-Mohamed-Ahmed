@@ -71,6 +71,30 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 7,
+    title: "First Resources Development Financial Consulting",
+    des: "A premium Arabic corporate website for a financial consulting firm, built with a polished RTL user experience, elegant branding, responsive sections, service presentation, and clear consultation call-to-actions designed to increase trust and client inquiries.",
+    img: "/first-resources.jpeg",
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg"],
+    link: "https://www.fdrfinconsult.com/",
+  },
+  {
+    id: 8,
+    title: "Mahiaa Company Industrial",
+    des: "A modern Arabic industrial company website designed to present manufacturing capabilities, materials, services, quality standards, gallery sections, and quotation request flows with a strong corporate visual identity and fully responsive layout.",
+    img: "/mahiaa.jpeg",
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg"],
+    link: "https://mahiaacompanyindustrial.com/",
+  },
+  {
+    id: 9,
+    title: "Al Makarem E-Branch Store",
+    des: "A complete Arabic e-commerce store for Al Makarem Attar, featuring product details, image gallery, pricing, discounts, categories, cart flow, search, and a mobile-friendly shopping experience tailored for local customers.",
+    img: "/store-1.jpeg",
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg"],
+    link: "https://almakarim-almumayyaza.vercel.app/",
+  },
+  {
     id: 1,
     title: "Gericht",
     des: "Discover the perfect meal at Gericht. Enjoy a seamless dining experience with easy menu access and simple reservations.",
