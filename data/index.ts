@@ -14,7 +14,7 @@ export const navItems = [
     link: "#testimonials",
   },
   {
-    name: { ar: "تواصل معي", en: "Contact" } satisfies LocalizedString,
+    name: { ar: "تواصل", en: "Contact" } satisfies LocalizedString,
     link: "#contact",
   },
 ];
@@ -23,7 +23,7 @@ export const gridItems = [
   {
     id: 1,
     title: {
-      ar: "أضع التعاون مع العميل في المقدمة، وأحافظ على تواصل واضح ومستمر طوال المشروع.",
+      ar: "أتعامل مع مشروعك كمنتج له هدف واضح، وليس مجرد شكل جميل.",
       en: "I put client collaboration first, with clear and continuous communication throughout the project.",
     } satisfies LocalizedString,
     description: { ar: "", en: "" } satisfies LocalizedString,
@@ -36,7 +36,7 @@ export const gridItems = [
   {
     id: 2,
     title: {
-      ar: "مرونة كاملة في التواصل واختلاف التوقيت.",
+      ar: "تواصل واضح ومرونة تناسب وقتك.",
       en: "Fully flexible with communication across time zones.",
     } satisfies LocalizedString,
     description: { ar: "", en: "" } satisfies LocalizedString,
@@ -48,9 +48,9 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: { ar: "أدواتي التقنية", en: "My tech stack" } satisfies LocalizedString,
+    title: { ar: "تقنيات حديثة", en: "My tech stack" } satisfies LocalizedString,
     description: {
-      ar: "أطوّر مهاراتي باستمرار",
+      ar: "أدوات تساعد موقعك يكون أسرع وأسهل في التطوير",
       en: "Always improving my skills",
     } satisfies LocalizedString,
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
@@ -62,7 +62,7 @@ export const gridItems = [
   {
     id: 4,
     title: {
-      ar: "شغوف بالتقنية وبناء منتجات ويب عالية الجودة.",
+      ar: "واجهات تجمع بين الشكل الاحترافي والتجربة السهلة.",
       en: "Passionate about technology and building high-quality web products.",
     } satisfies LocalizedString,
     description: { ar: "", en: "" } satisfies LocalizedString,
@@ -75,11 +75,11 @@ export const gridItems = [
   {
     id: 5,
     title: {
-      ar: "أعمل حاليًا على تطوير متجر إلكتروني.",
+      ar: "حلول ويب قابلة للنمو من الفكرة إلى الإطلاق.",
       en: "Currently building an e-commerce store.",
     } satisfies LocalizedString,
     description: {
-      ar: "نظرة من الداخل",
+      ar: "من الفكرة إلى الإطلاق",
       en: "The inside scoop",
     } satisfies LocalizedString,
     className: "md:col-span-3 md:row-span-2",
@@ -91,7 +91,7 @@ export const gridItems = [
   {
     id: 6,
     title: {
-      ar: "هل ترغب في بدء مشروعك معي؟",
+      ar: "عندك فكرة موقع أو متجر؟ خلينا نحولها لمنتج جاهز.",
       en: "Want to start a project together?",
     } satisfies LocalizedString,
     description: { ar: "", en: "" } satisfies LocalizedString,
@@ -111,7 +111,7 @@ export const projects = [
       en: "First Resources Development Financial Consulting",
     } satisfies LocalizedString,
     des: {
-      ar: "موقع تعريفي عربي احترافي لشركة استشارات مالية، بواجهة RTL راقية، وعرض واضح للخدمات وهوية بصرية موثوقة، وتجربة استخدام تبني الثقة وتزيد طلبات الاستشارة.",
+      ar: "موقع تعريفي يعرض خدمات الاستشارات المالية بثقة ووضوح، ويسهّل على العميل طلب الاستشارة.",
       en: "A premium Arabic corporate site for a financial consulting firm: polished RTL UX, clear service presentation, trustworthy branding, and consultation CTAs that build trust and drive inquiries.",
     } satisfies LocalizedString,
     img: "/first-resources.jpeg",
@@ -125,7 +125,7 @@ export const projects = [
       en: "Mahiaa Company Industrial",
     } satisfies LocalizedString,
     des: {
-      ar: "موقع شركة صناعية يعرض إمكانيات التوريد والمواد والخدمات ومعايير الجودة والمعرض وطلب عرض السعر، بتصميم مؤسسي متجاوب وهوية قوية.",
+      ar: "موقع مؤسسي يعرض خدمات الشركة الصناعية والتوريدات والجودة، مع تجربة سهلة لطلب عرض سعر.",
       en: "An industrial company website showcasing supply capabilities, materials, services, quality standards, a gallery, and a quote-request flow, with a strong corporate identity and fully responsive layout.",
     } satisfies LocalizedString,
     img: "/mahiaa.jpeg",
@@ -139,7 +139,7 @@ export const projects = [
       en: "Al Makarem E-Branch Store",
     } satisfies LocalizedString,
     des: {
-      ar: "متجر إلكتروني عربي متكامل لعرض المنتجات والتصنيفات والأسعار والخصومات والسلة والبحث، بتجربة شراء مناسبة للعملاء المحليين.",
+      ar: "متجر إلكتروني عربي يسهّل تصفح المنتجات والعروض والبحث والسلة لزيادة الطلبات.",
       en: "A complete Arabic e-commerce store with products, categories, pricing, discounts, cart, and search, delivering a smooth buying experience tailored to local customers.",
     } satisfies LocalizedString,
     img: "/store-1.jpeg",
@@ -150,7 +150,7 @@ export const projects = [
     id: 1,
     title: { ar: "Gericht", en: "Gericht" } satisfies LocalizedString,
     des: {
-      ar: "تجربة مطعم سلسة مع وصول سهل للقائمة وحجز مبسّط.",
+      ar: "واجهة مطعم أنيقة تساعد العميل يتصفح القائمة ويصل للمعلومات بسرعة.",
       en: "Discover the perfect meal at Gericht. Enjoy a seamless dining experience with easy menu access and simple reservations.",
     } satisfies LocalizedString,
     img: "/res.jpeg",
@@ -161,7 +161,7 @@ export const projects = [
     id: 2,
     title: { ar: "Tiem Zone", en: "Tiem Zone" } satisfies LocalizedString,
     des: {
-      ar: "تجربة تسوق سلسة لتصفّح الساعات واختيار القطعة المناسبة لكل مناسبة.",
+      ar: "تجربة تسوق واضحة لعرض الساعات بطريقة جذابة وسهلة.",
       en: "Simplify your shopping experience with Tiem Zone. Seamlessly browse and find the perfect watch for any occasion.",
     } satisfies LocalizedString,
     img: "/watch.jpeg",
@@ -172,7 +172,7 @@ export const projects = [
     id: 3,
     title: { ar: "MovieMingle", en: "MovieMingle" } satisfies LocalizedString,
     des: {
-      ar: "موقع أفلام تفاعلي بـ React.js مع بيانات حية من واجهات برمجية خارجية، وبحث وعرض ديناميكي وتصميم متجاوب.",
+      ar: "موقع أفلام تفاعلي ببحث سريع وعرض منظم وتجربة سلسة.",
       en: "A dynamic movie website using React.js, integrating third-party APIs for real-time movie data with search, dynamic content rendering, and responsive design.",
     } satisfies LocalizedString,
     img: "/movei.jpeg",
@@ -188,7 +188,7 @@ export const projects = [
     id: 4,
     title: { ar: "FlavorFind", en: "FlavorFind" } satisfies LocalizedString,
     des: {
-      ar: "استكشف عالمًا من النكهات مع قائمة ديناميكية تسهّل اكتشاف الأطباق وتخصيص تجربة الطلب.",
+      ar: "قائمة طعام ديناميكية تساعد المستخدم يختار بسرعة وبدون تعقيد.",
       en: "Explore a world of flavors with FlavorFind's dynamic menu. Effortlessly discover new dishes and customize your meal experience in just a few clicks.",
     } satisfies LocalizedString,
     img: "/menu.jpeg",
@@ -199,7 +199,7 @@ export const projects = [
     id: 5,
     title: { ar: "QueryQuest", en: "QueryQuest" } satisfies LocalizedString,
     des: {
-      ar: "منصة أسئلة وأجوبة تفاعلية للمحادثات الديناميكية والحصول على إجابات فورية من مجتمع خبراء.",
+      ar: "منصة أسئلة وأجوبة بتجربة واضحة للوصول للمعلومة بسهولة.",
       en: "Unlock knowledge with QueryQuest. Engage in dynamic conversations, ask questions, and get real-time answers from a vibrant community of experts.",
     } satisfies LocalizedString,
     img: "/q&a.jpeg",
@@ -210,7 +210,7 @@ export const projects = [
     id: 6,
     title: { ar: "BuildCon", en: "BuildCon" } satisfies LocalizedString,
     des: {
-      ar: "تصفّح العقارات واستكشف التفاصيل والعثور على المنزل أو فرصة الاستثمار المناسبة في تجربة واحدة متكاملة.",
+      ar: "واجهة عقارية منظمة تساعد المستخدم يستكشف العقارات بثقة.",
       en: "Discover your dream property with BuildCon. Browse listings, explore detailed features, and find the perfect home or investment opportunity—all in one seamless experience.",
     } satisfies LocalizedString,
     img: "/real.jpeg",
@@ -222,7 +222,7 @@ export const projects = [
 export const testimonials = [
   {
     quote: {
-      ar: "كان التعاون مع محمد تجربة احترافية متميزة؛ التزام بالمواعيد وحرص على جودة النتائج، وشغف واضح في كل تفاصيل التطوير. إن أردت رفع مستوى موقعك وتعزيز علامتك التجارية فمحمد هو الشريك المناسب.",
+      ar: "محمد كان واضح وملتزم من البداية. فهم المطلوب بسرعة، والنتيجة كانت موقع احترافي يعكس صورة أفضل للعلامة.",
       en: "Collaborating with Mohamed was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Mohamed's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and enhance your brand, Mohamed is the ideal partner.",
     } satisfies LocalizedString,
     name: { ar: "محمد عمر", en: "Mohamed Omar" } satisfies LocalizedString,
@@ -231,7 +231,7 @@ export const testimonials = [
   },
   {
     quote: {
-      ar: "العمل مع محمد كان تجربة رائعة؛ اهتمام بالتفاصيل ومبادرة والتزام بالمواعيد، مع فهم قوي لـ React.js وكود نظيف وفعّال رفع من جودة مشاريعنا.",
+      ar: "محمد يهتم بالتفاصيل ويكتب كود منظم. لا ينفذ فقط، بل يفكر في تجربة المستخدم وجودة النتيجة.",
       en: "Working with Mohamed was a fantastic experience. His attention to detail, proactive approach, and ability to meet deadlines were truly impressive. Throughout our work together, Mohamed consistently demonstrated a strong understanding of React.js, producing clean and efficient code that enhanced the functionality of our projects.",
     } satisfies LocalizedString,
     name: {
@@ -239,7 +239,7 @@ export const testimonials = [
       en: "Abdelrahman Alaa",
     } satisfies LocalizedString,
     title: {
-      ar: "مدرّب تطوير واجهات أمامية",
+      ar: "مدرّب واجهات أمامية",
       en: "Front-End Instructor",
     } satisfies LocalizedString,
     img: "/alaa.png",
@@ -271,11 +271,11 @@ export const workExperience = [
   {
     id: 1,
     title: {
-      ar: "متدرّب مهندس واجهات أمامية",
+      ar: "تطوير واجهات أمامية",
       en: "Frontend Engineer Intern",
     } satisfies LocalizedString,
     desc: {
-      ar: "ساهمت في تطوير منصة ويب باستخدام React.js مع تحسين التفاعل.",
+      ar: "تطوير واجهات React.js تفاعلية وسهلة الاستخدام.",
       en: "Helped build a web platform with React.js, improving interactivity.",
     } satisfies LocalizedString,
     className: "md:col-span-2",
@@ -284,11 +284,11 @@ export const workExperience = [
   {
     id: 2,
     title: {
-      ar: "متجر إلكتروني",
+      ar: "تطوير متاجر إلكترونية",
       en: "E-commerce Store",
     } satisfies LocalizedString,
     desc: {
-      ar: "صمّمت وطوّرت متجرًا إلكترونيًا باستخدام React.js.",
+      ar: "متاجر تعرض المنتجات والعروض والسلة بطريقة واضحة.",
       en: "Designed and developed an e-commerce website with React.js.",
     } satisfies LocalizedString,
     className: "md:col-span-2",
@@ -297,11 +297,11 @@ export const workExperience = [
   {
     id: 3,
     title: {
-      ar: "مشروع تطبيق ويب (عمل حر)",
+      ar: "مشاريع عملاء مستقلة",
       en: "Freelance App Dev Project",
     } satisfies LocalizedString,
     desc: {
-      ar: "قُدت تطوير تطبيق ويب لعميل من الفكرة حتى الإطلاق.",
+      ar: "تنفيذ مشاريع ويب من الفكرة حتى التسليم.",
       en: "Led a client web app from concept to deployment.",
     } satisfies LocalizedString,
     className: "md:col-span-2",
@@ -310,11 +310,11 @@ export const workExperience = [
   {
     id: 4,
     title: {
-      ar: "مطوّر واجهات أمامية رئيسي",
+      ar: "واجهات احترافية",
       en: "Lead Frontend Developer",
     } satisfies LocalizedString,
     desc: {
-      ar: "طوّرت وصُنت واجهات المستخدم باستخدام أحدث تقنيات الواجهة الأمامية.",
+      ar: "واجهات حديثة مناسبة لمواقع الشركات والمتاجر.",
       en: "Built and maintained user-facing features with modern frontend technologies.",
     } satisfies LocalizedString,
     className: "md:col-span-2",

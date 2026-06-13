@@ -95,3 +95,26 @@ html[lang="en"] body,
 html[lang="en"] body *:not(svg):not(path) {
   font-family: var(--font-inter), ui-sans-serif, sans-serif;
 }
+
+html[lang="ar"] {
+  text-rendering: optimizeLegibility;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+}
+
+html[lang="ar"] p,
+html[lang="ar"] span,
+html[lang="ar"] a,
+html[lang="ar"] button {
+  line-height: 1.7 !important;
+  letter-spacing: 0 !important;
+}
+
+html[lang="ar"] .heading {
+  line-height: 1.35 !important;
+}
