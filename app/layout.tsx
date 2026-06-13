@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Tajawal } from "next/font/google";
+import { Inter, Amiri_Quran } from "next/font/google";
 
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -10,9 +10,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const tajawal = Tajawal({
+const arabicFont = Amiri_Quran({
   subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700", "800", "900"],
+  weight: "400",
   variable: "--font-arabic",
 });
 
@@ -36,7 +36,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${tajawal.variable} font-sans`}>
+      <body className={`${inter.variable} ${arabicFont.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
